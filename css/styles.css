@@ -1,0 +1,40 @@
+body{
+    background-color: #800000;
+    font-family: 'Futura', Arial, sans-serif;
+    margin-left: 25px;
+    margin-top: 25px;
+
+}
+
+/*----------- ADMIN PAGE -----------*/ 
+
+.avmenu{
+    padding-top: 20px;
+  
+}
+
+.avbutton{
+    width: 100px;
+    height: 100px;
+    border: none;
+    text-align: center;
+    transition-duration: .60s;
+    background: url(images/comb.png);
+       
+}
+
+.avbutton1{
+    box-shadow: 0 30px 60px rgba(0,0,0,.5);
+}
+
+.avbutton1:hover{
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transform: scale(.95)
+}
+
+.avfont{
+    font-family: 'Futura', Arial, sans-serif;
+    color: white;
+
+
+}

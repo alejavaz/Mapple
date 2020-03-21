@@ -1,2 +1,0 @@
-# Mapple
-Proyecto Final PII
