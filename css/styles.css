@@ -8,6 +8,27 @@ body{
 
 /*----------- ADMIN PAGE -----------*/ 
 
+.logout{
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
+.menubtn{
+    float:left;
+    font-size: 50px;
+    right: 0;
+    background-color: #FFCC70;
+    color: #880000;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.menubtn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 .avmenu{
     padding-top: 20px;
   
