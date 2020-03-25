@@ -91,3 +91,77 @@ body{
     padding-right: 15px;
 
 }
+
+
+
+/*----------- TASK REGISTER PAGE -----------*/ 
+*{
+    margin:0 px;
+    padding:0 px;
+    box-sizing: border-box;
+    position: initial;
+}
+
+body{
+    background-color: #800000;
+}
+
+body>header {
+    
+    width: 80%;
+    height: 120px;
+    background-color: #800000;
+    text-align: center;
+    margin: auto;
+}
+
+body>header>img{
+    float: left;
+    width: 120px;
+    height: 120px;
+}
+
+body>header>h1{
+    float: center;
+    margin-right: 150px;
+    color: white;
+}
+
+body{
+    font-family: 'futura';
+    color: rgb(61, 24, 3);
+    font-size: medium;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+fieldset{
+    width: 80%;
+    background-color: #ffcc70;
+    border: 5px white solid;
+    border-radius: 10px;
+    margin: auto;
+    }
+
+fieldset>form>section{
+    text-align: center;
+    }
+
+fieldset>form>artticle>div{
+        position:relative;
+        top: 50px;
+        }
+
+fieldset>form>artticle>artticle>div{
+    position: relative;
+    left: 700px;
+    bottom: 100px;
+    }
+
+.btn_finalize{
+    position: relative;
+    left: 120px;
+    top: 50px; 
+}
