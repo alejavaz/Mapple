@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Administrator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    body {
+        background-color: #800000;
+        background-image: url('imgs/Mapple.png');
+        background-repeat: no-repeat;
+    }
+</style>
+
+<div class = "logout">
+     <p><input class = "menubtn" type="submit" value="Log out" /></p>
+</div>
+
+
+<section>
+
+    <div class="avmenu" style="width: 55%; float: right">
+
+        <input type="image" class="avbutton avbutton1" src="imgs/comb.png" data-toggle="modal" data-target="#myModal0">
+        <h1 class="avfont">Add user</h1>
+
+        <div id="myModal0" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="avmodalstyle">
+
+                        <form action="http://localhost/PII-2/php/modificar.php" method="get">
+
+                            <p><label for="">New user: </label>
+                                <input type="email" name="usuariomod" id="" size="30" form autocomplete="off"> </p>
+
+                            <p><label for="">Select role: </label></p>
+                            <label class="container">Developer
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Team Lead
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Admin
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <p><input class = "avbutt" type="submit" value="Add user" /></p>
+                            <br>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="avmenu" style="width: 60%; float: right">
+
+        <input type="image" class="avbutton avbutton1" src="imgs/comb.png" data-toggle="modal" data-target="#myModal1">
+        <h1 class="avfont">Modifiy user</h1>
+
+        <div id="myModal1" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="avmodalstyle">
+
+                        <form action="http://localhost/PII-2/php/modificar.php" method="get">
+
+                            <p><label for="">Current id: </label>
+                                <input type="email" name="usuarioactual" id="" size="30" form autocomplete="off"> </p>
+
+                            <p><label for="">New id: </label>
+                                <input type="email" name="usuariomod" id="" size="30" form autocomplete="off"> </p>
+
+                            <p><label for="">Select role: </label></p>
+                            <label class="container">Developer
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Team Lead
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Admin
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <p><input class = "avbutt" type="submit" value="Modify user" /></p>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="avmenu" style="width: 65%; float: right">
+
+        <input type="image" class="avbutton avbutton1" src="imgs/comb.png" data-toggle="modal" data-target="#myModal2">
+        <h1 class="avfont">Delete user</h1>
+
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="avmodalstyle">
+
+                        <form action="http://localhost/PII-2/php/borrar.php" method="get">
+
+                            <p><label for="">User: </label>
+                                <input type="email" name="usuario" id="" size="30"> </p>
+
+                            <p><label class="container">Confirm Delete
+                                    <input type="checkbox" value = "0">
+                                    <span class="checkmark"></span>
+                                </label></p>
+
+                            <input class = "avbutt" type="submit" value="Delete">
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="avmenu" style="width: 60%; float: right">
+
+        <input type="image" class="avbutton avbutton1" src="imgs/comb.png" data-toggle="modal" data-target="#myModal3">
+        <h1 class="avfont">Add GIT proyect</h1>
+
+        <div id="myModal3" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="avmodalstyle">
+
+                        <form action="http://localhost/PII-2/php/modificar.php" method="get">
+
+                            <p><label for="">New GIT proyect: </label>
+                                <input type="email" name="usuariomod" id="" size="30" form autocomplete="off"> </p>
+
+                            <p><label for="">Select status: </label></p>
+                            <label class="container">Open
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">In Progress
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Finished
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p><label class="container">Confirm creation
+                                    <input type="checkbox" value = "0">
+                                    <span class="checkmark"></span>
+                                </label></p>
+
+                            <p><input class = "avbutt" type="submit" value="Add GIT proyect" /></p>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<section>
+
+    <div class="avmenu" style="width: 55%; float: right">
+
+        <input type="image" class="avbutton avbutton1" src="imgs/comb.png" data-toggle="modal" data-target="#myModal4">
+        <h1 class="avfont">Modifiy GIT proyect</h1>
+
+        <div id="myModal4" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                    <div class="avmodalstyle">
+
+                        <form action="http://localhost/PII-2/php/modificar.php" method="get">
+                            <p><label for="">Current GIT id: </label>
+                                <input type="email" name="usuarioactual" id="" size="30" form autocomplete="off"> </p>
+                            <p><label for="">New GIT id: </label>
+                                <input type="email" name="usuariomod" id="" size="30" form autocomplete="off"> </p>
+                            <p><label for="">Select status: </label></p>
+                            <label class="container">Open
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">In Progress
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Finished
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <p><input class = "avbutt" type="submit" value="Modify user" /></p>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="avmenu" style="width: 60%; float: right">
+
+        <input type="image" class="avbutton avbutton1" src="imgs/comb.png">
+        <h1 class="avfont">Modify Report</h1>
+       
+    </div>
+
+</section>
+
+
+
+</html>

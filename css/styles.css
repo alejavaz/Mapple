@@ -1,3 +1,103 @@
+<<<<<<< HEAD
+=======
+body{
+    background-color: #800000;
+    font-family: 'Futura', Arial, sans-serif;
+    margin-left: 25px;
+    margin-top: 25px;
+
+}
+
+/*----------- ADMIN PAGE -----------*/ 
+
+.logout{
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
+.menubtn{
+    float:left;
+    font-size: 50px;
+    right: 0;
+    background-color: #FFCC70;
+    color: #880000;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.menubtn:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.avmenu{
+    padding-top: 20px;
+  
+}
+
+.avbutton{
+    width: 100px;
+    height: 100px;
+    border: none;
+    text-align: center;
+    transition-duration: .60s;
+    background: url(images/comb.png);
+    
+}
+
+.avbutt{
+    float: right;
+    font-size: 20px;
+    right: 0;
+    background-color: #880000;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+       
+}
+
+.avbutt:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.avbutton1{
+    box-shadow: 0 30px 60px rgba(0,0,0,.5);
+}
+
+.avbutton1:hover{
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transform: scale(.95)
+}
+
+.avfont{
+    font-family: 'Futura', Arial, sans-serif;
+    color: white;
+
+
+}
+
+.avmodalstyle{
+    background-color: #FFCC70;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 20px;
+    outline-width: 5px;
+    outline-color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    padding-right: 15px;
+
+}
+
+
+
+/*----------- TASK REGISTER PAGE -----------*/ 
+>>>>>>> Admin_page
 *{
     margin:0 px;
     padding:0 px;
@@ -59,7 +159,11 @@ fieldset>form>artticle>div{
 
 fieldset>form>artticle>artticle>div{
     position: relative;
+<<<<<<< HEAD
     left: 720px;
+=======
+    left: 700px;
+>>>>>>> Admin_page
     bottom: 100px;
     }
 

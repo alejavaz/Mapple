@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Register Page</title>
+<<<<<<< HEAD
     <link rel="shortcut icon" href="../img/Mapple.png">
+=======
+    <link rel="shortcut icon" href="../imgs/Mapple.png">
+>>>>>>> Admin_page
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
 
 </head>
 <body>
     <header>
+<<<<<<< HEAD
         <img src="../Mapple.png" alt="Mapple_Logo">
+=======
+        <img src="../imgs/Mapple.png" alt="Mapple_Logo">
+>>>>>>> Admin_page
         <h1>Task Register Module </h1>
     </header>
 
@@ -24,10 +32,41 @@
             </section>
             <artticle>
                 <div>
+<<<<<<< HEAD
                     Git Proyect: <input type="text" name="git_proyect" /><p></p>  
                     Git Branch: <textarea name="git_branch" ></textarea><p></p>
                     <p></p>   
                     Task Status: <input type="status" name="task_status" /><p></p>
+=======
+                <form>
+                    <!-- Lista de selección -->
+                    GIT Proyect:
+                    <select name="git_proyect">
+                        <!-- Opciones de la lista -->
+                        <option value="GitProyect1">GIT Proyect #1</option>
+                        <option value="GitProyect2">GIT Proyect #2</option> <!-- Opción por defecto -->
+                        <option value="GitProyect3">GIT Proyect #3</option>
+                    </select>
+                    </form>
+                    <p></p>
+                    <p></p>
+                    <!--Git Proyect: <input type="text" name="git_proyect" /><p></p>-->  
+                    <div>
+                    Git Branch: <textarea name="git_branch" ></textarea><p></p>
+                    <p></p>
+                    </div>
+                    <form>
+                    <!-- Lista de selección -->
+                    Task status:
+                    <select name="status">
+                        <!-- Opciones de la lista -->
+                        <option value="inProgress">InProgress</option>
+                        <option value="finished" selected>Finished</option> <!-- Opción por defecto -->
+                        <option value="pending">Pending</option>
+                    </select>
+                    </form>   
+                    <!--Task Status: <input type="status" name="task_status" /><p></p>-->
+>>>>>>> Admin_page
                     <p></p>
                     <p></p>
                     Comments: <textarea name="comments" row="2"></textarea>
@@ -44,8 +83,15 @@
                                 <p></p>
                                 <p></p>
                             </div>
+<<<<<<< HEAD
                             <div>  
                                 Total Hours: <input type="number" name="total_hours" /><p></p>
+=======
+                            <div>
+                                <label for="quantity"></lavel>  
+                                Total Hours: <input type="number" name="total_hours" 
+                                min="0.5" max="5" step="0.5"/><p></p>
+>>>>>>> Admin_page
                                 <p></p>
                                 <p></p>
                             </div>
