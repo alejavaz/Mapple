@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-=======
+/*<<<<<<< HEAD
+=======*/
 body{
     background-color: #800000;
     font-family: 'Futura', Arial, sans-serif;
@@ -94,10 +94,11 @@ body{
 
 }
 
+/*>>>>>>> Admin_page
 
+/*----------- TASK REGISTER PAGE -----------
+>>>>>>> new_tast_register_page*/
 
-/*----------- TASK REGISTER PAGE -----------*/ 
->>>>>>> Admin_page
 *{
     margin:0 px;
     padding:0 px;
@@ -139,36 +140,37 @@ body{
     padding-right: 20px;
 }
 
-
 fieldset{
     width: 80%;
     background-color: #ffcc70;
     border: 5px white solid;
     border-radius: 10px;
     margin: auto;
+    font-size: 20px;
     }
-
-fieldset>form>section{
+    
+fieldset>form>div{
     text-align: center;
+    position:relative;
+    top: 40px;
     }
 
-fieldset>form>artticle>div{
-        position:relative;
-        top: 50px;
-        }
-
-fieldset>form>artticle>artticle>div{
+fieldset>form>section>artticle{
     position: relative;
-<<<<<<< HEAD
-    left: 720px;
-=======
-    left: 700px;
->>>>>>> Admin_page
+    top: 50px;
+    left: 50px;
+    }
+
+fieldset>form>section>div{
+    position: relative;
+    left: 630px;
     bottom: 100px;
     }
 
 .btn_finalize{
     position: relative;
-    left: 120px;
-    top: 50px; 
+    left: 220px;
+    top: 40px;
+    border-radius: 30%; 
 }
+/*>>>>>>> end_new_tast_register_page*/
