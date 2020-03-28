@@ -92,7 +92,8 @@ body{
 
 }
 
-/* -------------------- TASK_REGISTER_PAGE ----------------------------*/
+
+/*----------- TASK REGISTER PAGE -----------*/
 
 *{
     margin:0 px;
@@ -135,32 +136,36 @@ body{
     padding-right: 20px;
 }
 
-
 fieldset{
     width: 80%;
     background-color: #ffcc70;
     border: 5px white solid;
     border-radius: 10px;
     margin: auto;
+    font-size: 20px;
     }
-
-fieldset>form>section{
+    
+fieldset>form>div{
     text-align: center;
+    position:relative;
+    top: 40px;
     }
 
-fieldset>form>artticle>div{
-        position:relative;
-        top: 50px;
-        }
-
-fieldset>form>artticle>artticle>div{
+fieldset>form>section>artticle{
     position: relative;
-    left: 720px;
+    top: 50px;
+    left: 50px;
+    }
+
+fieldset>form>section>div{
+    position: relative;
+    left: 630px;
     bottom: 100px;
     }
 
 .btn_finalize{
     position: relative;
-    left: 120px;
-    top: 50px; 
+    left: 220px;
+    top: 40px;
+    border-radius: 30%; 
 }
