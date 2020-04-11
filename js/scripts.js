@@ -62,3 +62,10 @@ function change_button(checkbx,button_id) {
     }
 }
 
+function highlight_input(x) {
+    x.style.background = "#ffcc80";
+}
+
+function white_input(x) {
+    x.style.background = "white";
+}

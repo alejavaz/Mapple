@@ -53,12 +53,12 @@
                         <div class="modalstyle">
                             <form id="adduser" for autocomplete="off" action="../functions/adduser.php" method="post">
                                 <p><label for="">User: </label></p>
-                                <p><input type="email" name="getuser" id="" size="30"> </p>
+                                <p><input type="email" name="getuser" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
                                 <p><label for="">Edit user name: </label>
-                                    <input type="checkbox" id="modusr" onclick="change_button(this,'sub3')" /></P>
+                                    <input type="checkbox" id="modusr"  onfocus="highlight_input(this)" onblur="white_input(this)" onclick="change_button(this,'sub3')" /></P>
                                 <p><input type="email" name="getnewuser" id="sub3" size="30" disabled="disabled"> </p>
                                 <p><label for="">Set password: </label></p>
-                                <p> <input type="text" name="getpass" id="" size="30"> </p>
+                                <p> <input type="text" name="getpass" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
                                 <p><label for="">Select role: </label></p>
                                 <P></P><label class="container">Developer
                                     <input type="radio" checked="checked" name="addu" value="1">
@@ -129,7 +129,7 @@
                         <div class="modalstyle" style="width: 430px;">
                             <form id="deleteuser" for autocomplete="off" action="../functions/deleteuser.php" method="post">
                                 <p><label for="">User: </label>
-                                    <input type="email" name="delusuario" id="" size="30"></p>
+                                    <input type="email" name="delusuario" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"></p>
                                 <p><label class="container">Confirm Delete
                                         <input type="checkbox" id="confirmdelete" value="1" onclick="confirm_delete(this)" /></P>
                                 <P><button class="hover" type="submit" id="delete" disabled>Delete </button></p>
@@ -175,7 +175,7 @@
                                 <section>
                                     <div class=git1>
                                         <p><label for="">GIT proyect: </label></p>
-                                        <p><input type="text" name="gitname" id="" size="30"> </p>
+                                        <p><input type="text" name="gitname" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
                                         <label class="container">Open
                                             <input type="radio" checked="checked" name="radio1" value="1">
                                             <span class="checkmark"></span>
@@ -234,9 +234,9 @@
                                 <section>
                                     <div class=git1>
                                         <p><label for="">Current GIT proyect: </label></p>
-                                        <p><input type="text" name="gitname" id="" size="30"> </p>
+                                        <p><input type="text" name="gitname" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
                                         <p><label for="">Update GIT proyect properties to: </label></p>
-                                        <p><input type="text" name="gitnew" id="" size="30"> </p>
+                                        <p><input type="text" name="gitnew" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
                                         <label class="container">Open
                                             <input type="radio" checked="checked" name="radio1" value="1">
                                             <span class="checkmark"></span>
