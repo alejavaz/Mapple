@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access denied</title>
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script src="../js/scripts.js"></script>
 </head>
 <body>
     <div class="content">
@@ -13,22 +14,5 @@
         <button class="go_back_btn" id="go_back_btn" type="button" onClick="javascript:clickinner(this);">Go back</button>
     </div>
 
-    <script>
-
-        function bigImg(x) {
-            x.style.height = "550px";
-            x.style.width = "550px";
-        };
-
-        function normalImg(x) {
-            x.style.height = "500px";
-            x.style.width = "500px";
-        };
-
-        function clickinner(go_back_btn) { 
-            location.href='general_login.php';
-        };
-
-    </script>
 </body>
 </html>

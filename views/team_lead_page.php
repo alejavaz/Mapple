@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../js/scripts.js"></script>
 </head>
 <body> 
 
@@ -211,52 +212,6 @@
         </table>
 
 </div>
-
-<script>
-
-    function fill_evaluation_data(id){
-      document.getElementById("id_evaluation").value = id;  
-    }
-
-    function fill_evaluation_data2(hours){
-      document.getElementById("registered_hours").value = hours;  
-    }
-
-    function fill_report_data(id){
-      document.getElementById("report_id").value = id;  
-    }
-
-    function highlight_input(x) {
-      x.style.background = "#ffcc80";
-    }
-
-    function white_input(x) {
-      x.style.background = "white";
-    }
-
-    function selected_hours(message) {
-      Swal.fire({
-          position: 'center',
-          icon: 'warning',
-          title: '<b class="warning">Hey... </b>',
-          html: '<b class="popup">' + message + '</b>',
-          background: '#FFCC70',
-          confirmButtonColor: '#880000'
-      });
-    }
-
-    function selected_report(message) {
-      Swal.fire({
-          position: 'center',
-          icon: 'warning',
-          title: '<b class="warning">Hey... </b>',
-          html: '<b class="popup">' + message + '</b>',
-          background: '#FFCC70',
-          confirmButtonColor: '#880000'
-      });
-    }
-
-</script>
 
 </body>
 </html>

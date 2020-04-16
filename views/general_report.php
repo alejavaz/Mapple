@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../js/scripts.js"></script>
 </head>
 <body>
     <div class="content">
@@ -116,11 +117,5 @@
         <br>
         <br>
     </div>
-
-    <script>
-        function clickinner(go_back_btn_gral) { 
-            location.href='team_lead_page.php';
-        };
-    </script>
 </body>
 </html>
