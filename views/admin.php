@@ -35,7 +35,7 @@
     <section>
         <div class="log_out_container">
             <br>
-            <form action="general_login.php">
+            <form action="../general_login.php">
                 <button type="input">Log out</button>
             </form>
         </div>

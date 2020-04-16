@@ -1,11 +1,11 @@
 <?php
-session_start();
+//session_start();
 
 $conn = mysqli_connect(
   'localhost',
   'root',
   '',
   'mapple'
-) or die(mysqli_erro($mysqli));
+) or die(mysqli_error($mysqli));
 
 ?>
