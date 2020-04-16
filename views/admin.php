@@ -97,7 +97,7 @@
                                             <div>
                                                 <?php
                                                 $connect = new MySqli('localhost', 'root', '', 'mapple');
-                                                $resultSet = mysqli_query($connect, "SELECT u.id_u, u.email, r.rol FROM users u JOIN roles r ON id_r = u.rol WHERE status = 0");
+                                                $resultSet = mysqli_query($connect, "SELECT u.id_u, u.email, r.rol FROM users u JOIN roles r ON id_r = u.rol WHERE status = 0 ORDER BY u.email");
                                                 ?>
                                                 <select size='3' name='email'>
                                                     <?php
@@ -126,7 +126,7 @@
             <div id="modaldelete" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div>
-                        <div class="modalstyle" style="width: 430px;">
+                        <div class="modalstyle" style="width: 450px;">
                             <form id="deleteuser" for autocomplete="off" action="../functions/deleteuser.php" method="post">
                                 <p><label for="">User: </label>
                                     <input type="email" name="delusuario" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"></p>
@@ -308,7 +308,7 @@
                             $conn = new MySqli('localhost', 'root', '', 'mapple');
                             $show = mysqli_query($conn, "SELECT g.id_g,p.name_p,p.url,d.email,g.gentry_date, g.start, g.end, g.hours, g.u_comment, 
                             u.email,g.approved_hrs, g.l_comments FROM gituser g JOIN users u ON u.id_u = g.lead 
-                            JOIN users d ON d.id_u = g.dev JOIN proyect p ON p.id = g.git_proyect ORDER BY id_g ASC");
+                            JOIN users d ON d.id_u = g.git_user_email JOIN proyect p ON p.id = g.git_proyect ORDER BY id_g ASC");
 
                             
                             while ($row = mysqli_fetch_array($show)) {

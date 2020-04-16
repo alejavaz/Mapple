@@ -19,6 +19,8 @@
 <style>
         body {
             background-color: #800000;
+            background-image: url('../imgs/Mapple.png');
+            background-repeat: no-repeat;
         }
     </style>
 

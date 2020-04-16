@@ -15,6 +15,21 @@ function boxsuccess(message) {
     });
 }
 
+function taskboxsuccess(message) {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: '<b class="warning">Transaction Success: </b>',
+        html: '<b class="popup"> ' + message + '</b>',
+        background: '#FFCC70',
+        confirmButtonColor: '#880000'
+    }).then(okay => {
+        if (okay) {
+            window.location.href = "../views/task_register.php";
+        }
+    });
+}
+
 function boxwarning(message) {
     Swal.fire({
         position: 'center',
@@ -41,6 +56,21 @@ function boxfail(message) {
     }).then(okay => {
         if (okay) {
             window.location.href = "../views/admin.php";
+        }
+    });
+}
+
+function taskboxfail(message) {
+    Swal.fire({
+        position: 'center',
+        icon: 'error',
+        title: '<b class="warning">Transaction Fail: </b>',
+        html: '<b class="popup">' + message + '</b>',
+        background: '#FFCC70',
+        confirmButtonColor: '#880000'
+    }).then(okay => {
+        if (okay) {
+            window.location.href = "../views/task_register.php";
         }
     });
 }
@@ -94,4 +124,15 @@ function selected_report(message) {
 function clickinner(logout) { 
     location.href='general_login.php';
 };
+
+$(document).ready(function() {
+    $("#git_proyect2").change(function() {
+        $("#git_proyect2 option:selected").each(function() {
+            idProyect = $(this).attr('id'); //almacena variable
+            $.post("../functions/obtenerURL.php", { idProyect: idProyect }, function(data){
+                $("#spURL").html(data);
+               });
+       });
+    })
+});
 

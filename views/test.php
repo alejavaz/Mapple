@@ -120,3 +120,34 @@
 </body>
 
 </html>
+
+
+
+
+<?php 
+include("../functions/db.php"); 
+
+$IdProyect = $_POST['idProyect']; //almacena variable
+$query = $conn->query("SELECT url FROM proyect WHERE id = " . $IdProyect);
+$URLProyect = "";
+while ($valores = mysqli_fetch_array($query)) {
+	$URLProyect = $valores['url'];
+}
+
+echo $URLProyect;
+
+?>
+
+
+
+$(document).ready(function() {
+    $("#git_proyect2").change(function() {
+        $("#git_proyect2 option:selected").each(function() {
+            idProyect = $(this).attr('id'); //almacena variable
+            $.post("../functions/obtenerURL.php", { idProyect: idProyect }, function(data){
+                $("#spURL").html(data);
+               });
+       });
+    })
+});
+

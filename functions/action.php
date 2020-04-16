@@ -1,10 +1,7 @@
 <?php
 include("../db/db.php");
 
-
-
 $input = filter_input_array(INPUT_POST);
-
 $name_p = mysqli_real_escape_string($conn,$input)["name_p"];
 $url = mysqli_real_escape_string($conn,$input)["url"];
 $email = mysqli_real_escape_string($conn,$input)["email"];

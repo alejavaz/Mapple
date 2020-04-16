@@ -1,5 +1,7 @@
 body{
     background-color: #800000;
+    background-image: url('../imgs/Mapple.png');
+    background-repeat: no-repeat;
     font-family: 'Futura', Arial, sans-serif;
     margin-left: 25px;
     margin-top: 25px;
@@ -69,8 +71,8 @@ die(var_dump($result));
     border: none;
     transition-duration: 0.3s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+
     
-       
 }
 
 
@@ -90,7 +92,7 @@ die(var_dump($result));
     transition-duration: 0.3s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
     
-       
+
 }
 
 .hover2:hover{
@@ -114,7 +116,7 @@ die(var_dump($result));
 .modalstyle{
     background-color: #FFCC70;
     font-family: 'Futura', Arial, sans-serif ;
-    width: 500px;
+    width: 550px;
     font-size: 25px;
     outline-width: 5px;
     outline-color: white;
@@ -178,22 +180,22 @@ die(var_dump($result));
     min-width: 400px;
     color:black;
     
- }
+}
 
- .tablecontent td, .tablecontent th {
+.tablecontent td, .tablecontent th {
     border: 1px solid #880000;
     padding: 8px;
     text-align: center;
-  }
+}
 
-  .tablecontent th {
+.tablecontent th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
     background-color: #880000;
     color: white;
-  }
-  
+}
+
 .git3{
     padding-right: 15px;
         
@@ -226,4 +228,170 @@ div.log_out_container button{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
     position: fixed;
     margin-right: 20px;
-  }
+}
+
+
+/*----------- ADD TASK PAGE -----------*/ 
+
+
+*{
+    margin:0 px;
+    padding:0 px;
+    box-sizing: border-box;
+    position: initial;
+}
+
+body{
+    background-color: #800000;
+}
+
+body>header {
+    
+    width: 80%;
+    height: 120px;
+    background-color: #800000;
+    text-align: center;
+    margin: auto;
+}
+
+body>header>img{
+    float: left;
+    width: 120px;
+    height: 120px;
+}
+
+body>header>h1{
+    float: center;
+    margin-right: 150px;
+    color: white;
+}
+
+div.log_out_container button{
+    text-align: right;
+    font-size: 15px;
+    right: 0;
+    background-color: #FFCC70;
+    color: #880000;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: fixed;
+    margin-right: 20px;
+}
+
+body{
+    font-family: 'futura';
+    color: rgb(61, 24, 3);
+    font-size: medium;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.fieldset{
+    
+    width: 800px;
+    height: 450px;
+    background-color: #ffcc70;
+    border: 5px white solid;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 20px;
+    position: relative;
+    left: 132px;
+}
+
+.header{
+    
+    width:100%;
+    height: 15%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.submenu{
+    width:100%;
+    height:60%;
+    
+}
+
+.a{
+    padding-top: 15px;
+    padding-left: 8px;
+    width:40%;
+    height: 100%;
+    float:left;
+    
+}
+
+.b{
+    padding-top: 15px;
+    
+    width:35%;
+    height: 100%;
+    float:left;
+    text-align: left;
+}
+
+.c{
+    padding-left: 15px;
+    padding-top: 15px;
+    
+    width:25%;
+    height: 100%;
+    float:left;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.d{
+    width:100%;
+    height: 30%;
+    text-align: center;
+    
+}
+
+fieldset>div{
+    widht: 33%;
+    text-align: center;
+    position:relative;
+    top: 40px;
+    }
+
+fieldset>form>div>div{
+    float: right;
+    position:relative;
+    bottom: 70px;
+    right: 90px;
+    }
+
+fieldset>form>section>artticle{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    }
+
+fieldset>form>section>div{
+    position: relative;
+    left: 630px;
+    bottom: 100px;
+    }
+
+.c>.btns{
+    position: relative;
+    left: 100px;
+    top: 40px;
+    border-radius: 30%; 
+}
+
+.c>.record_task_btn{
+    position: relative;
+    right: 260px;
+    top: 10px;
+    border-radius: 30%;
+    color: #020088;
+    font: bold;
+    font-weight: bolder;
+}
