@@ -25,24 +25,22 @@ if (isset($_POST['logear'])) {
             }
         }
 
-        if ($access == 1 && $user_role == 1) {
-            header('Location: ../views/task_register.php'); //developer
+        if ($access == 1) {
+            if ($user_role == 1) {
+                header('Location: ../views/task_register.php'); //developer
+                $_SESSION['var'] = $user_email;
+            }
+            elseif ($user_role == 2) {
+                header('Location: ../views/team_lead_page.php'); //team leader
+                $_SESSION['var'] = $user_email;
+            }
+            else {
+                header('Location: ../views/admin.php'); //admin
+                $_SESSION['var'] = $user_email;
+                echo "f";
+            }
 
-            $_SESSION['var'] = $user_email;
-
-        }
-        elseif ($access == 1 && $user_role == 2) {
-            header('Location: ../views/team_lead_page.php'); //team leader
-
-            $_SESSION['var'] = $user_email;
-
-        }    
-        elseif ($access == 1 && $user_role == 3) {
-            header('_blank'); //admin
-
-            $_SESSION['var'] = $user_email;
-
-        }    
+        }  
         else {
             header('Location: ../views/access_denied.php');
         }    
