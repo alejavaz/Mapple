@@ -1,30 +1,15 @@
-body{
+
+body {
     background-color: #800000;
     font-family: 'Futura', Arial, sans-serif;
     margin-left: 25px;
     margin-top: 25px;
+    background-image: url('../imgs/Mapple.png');
+    background-repeat: no-repeat;
 
 }
 
 /*----------- ADMIN PAGE -----------*/ 
-
-/*
-
-style= "border: red 5px solid"
-echo();
-die(var_dump($result));
-
-*/
-
-
-.logout{
-    padding-top: 25px;
-    width: auto;
-    height: auto;
-    padding-left: 57%;
-    align-items: center;
-}
-
 
 .menubtn{
     font-size: 50px;
@@ -41,6 +26,146 @@ die(var_dump($result));
 .menubtn:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+.avmenu{
+    padding-top: 20px;
+  
+}
+
+.avbutton{
+    width: 100px;
+    height: 100px;
+    border: none;
+    text-align: center;
+    transition-duration: .60s;
+    background: url(images/comb.png);
+    
+}
+
+.avbutt{
+    float: right;
+    font-size: 20px;
+    right: 0;
+    background-color: #880000;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition-duration: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+       
+}
+
+.avbutt:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.avbutton1{
+    box-shadow: 0 30px 60px rgba(0,0,0,.5);
+}
+
+.avbutton1:hover{
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    transform: scale(.95)
+}
+
+.avfont{
+    font-family: 'Futura', Arial, sans-serif;
+    color: white;
+}
+
+.avmodalstyle{
+    background-color: #FFCC70;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-size: 20px;
+    outline-width: 5px;
+    outline-color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    padding-right: 15px;
+
+}
+
+.git3{
+  padding-right: 15px;    
+}
+
+.modtxt{
+    padding-top: 15px;
+    padding-left: 15px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.tablecontent{
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 20px; 
+    margin-right: 0;
+    font-size: 17px;
+    min-width: 400px;
+    color:black;
+    
+ }
+
+.tablecontent td, .tablecontent th {
+  border: 1px solid #880000;
+  padding: 8px;
+  text-align: center;
+}
+
+.tablecontent th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #880000;
+  color: white;
+}
+
+.modalmodrep{
+  background-color: #FFCC70;
+  font-family: 'Futura', Arial, sans-serif ;
+  font-size: 25px;
+  border: white 5px solid; 
+  position: absolute;
+  top: 150px;
+  right: 100px;
+  bottom: auto;
+  left: 100px;
+  z-index: 10040;
+  overflow: auto;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.modalstylegit{
+    background-color: #FFCC70;
+    font-family: 'Futura', Arial, sans-serif ;
+    width : auto;
+    height : auto;
+    font-size: 25px;
+    outline-width: 5px;
+    outline-color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border: white 5px solid
+    
+}
+
+.logout{
+    padding-top: 25px;
+    width: auto;
+    height: auto;
+    padding-left: 57%;
+    align-items: center;
+}
+
 .paddmenu{
     padding-top: 10px;
     height: 160px;
@@ -128,102 +253,477 @@ die(var_dump($result));
 
 }
 
-.modalstylegit{
-    background-color: #FFCC70;
-    font-family: 'Futura', Arial, sans-serif ;
-    width : auto;
-    height : auto;
-    font-size: 25px;
-    outline-width: 5px;
-    outline-color: white;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    padding-right: 15px;
-    border-radius: 10px;
-    border: white 5px solid
+/*----------- TASK REGISTER PAGE -----------*/
+
+*{
+    margin:0 px;
+    padding:0 px;
+    box-sizing: border-box;
+    position: initial;
+}
+
+body>header {
     
+    width: 80%;
+    height: 120px;
+    background-color: #800000;
+    text-align: center;
+    margin: auto;
 }
 
-.modalmodrep{
-    background-color: #FFCC70;
-    font-family: 'Futura', Arial, sans-serif ;
-    font-size: 25px;
-    border: white 5px solid; 
-    position: absolute;
-    top: 150px;
-    right: 100px;
-    bottom: auto;
-    left: 100px;
-    z-index: 10040;
-    overflow: auto;
-    overflow-y: auto;
-    border-radius: 10px;
+body>header>img{
+    float: left;
+    width: 120px;
+    height: 120px;
 }
 
-.modtxt{
-    padding-top: 15px;
-    padding-left: 15px;
-    text-align: center;
-    font-weight: bold;
-
-}
-
-.tablecontent{
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    margin-left: 20px; 
-    margin-right: 0;
-    font-size: 17px;
-    min-width: 400px;
-    color:black;
-    
- }
-
- .tablecontent td, .tablecontent th {
-    border: 1px solid #880000;
-    padding: 8px;
-    text-align: center;
-  }
-
-  .tablecontent th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #880000;
+body>header>h1{
+    float: center;
+    margin-right: 150px;
     color: white;
-  }
-  
-.git3{
-    padding-right: 15px;
-        
+}
+
+body{
+    font-family: 'futura';
+    color: rgb(61, 24, 3);
+    font-size: medium;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+fieldset{
+    width: 80%;
+    background-color: #ffcc70;
+    border: 5px white solid;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 20px;
+    }
+    
+fieldset>form>div{
+    text-align: center;
+    position:relative;
+    top: 40px;
+    }
+
+fieldset>form>section>artticle{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    }
+
+fieldset>form>section>div{
+    position: relative;
+    left: 630px;
+    bottom: 100px;
+    }
+
+.btn_finalize{
+    position: relative;
+    left: 220px;
+    top: 40px;
+    border-radius: 30%; 
+}
+
+/* LOG OUT */
+
+div.log_out_container button{
+  text-align: right;
+  font-size: 15px;
+  right: 0;
+  background-color: #FFCC70;
+  color: #880000;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  transition-duration: 0.3s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: fixed;
+  margin-right: 20px;
+}
+
+/* ACTIVE USER */
+
+div.active_user H6{
+  text-align: right;
+  font-size: 15px;
+  right: 0;
+  background-color: #FFCC70;
+  color: #880000;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  transition-duration: 0.3s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: fixed;
+  margin-right: 20px;
+}
+
+/* LOG IN PAGE */
+
+div.content img.log_in_logo{
+  display: block;
+  margin-top: -50px;
+  margin-left: 500px;
+  margin-right: 400px;
+  width: 40%;
+}
+
+div.content button.log_in_button {
+  border-radius: 8px;
+  background-color: #FFCC70;
+  border: none;
+  color: #880000;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px;
+  width: 350px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px;
+  margin-left: 650px;
+}
+ 
+div.content button.log_in_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+ 
+div.content button.log_in_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+div.content form {
+  font-weight: bold;
+  color: #000000;
+  text-align: center;                                    
+}
+
+div.content input {
+  font-size: 20px;
+  text-align: left;                                    
+}
+
+div.content label {
+  text-align: center;                                     
+  font-size: 25px;
+  color: white;
+}
+
+/* ACCESS DENIED PAGE */
+
+div.content img.stop_hand{
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+}
+
+div.content h2.access_denied_warning {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+div.content button.go_back_btn {
+  display: block;
+  padding: 15px 25px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  color: #880000;
+  background-color: #FFCC70;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px gray;
+  margin: 0 auto;
+  width: 10%;
+}
+
+div.content button.go_back_btn:hover {
+  background-color: orange;
+}
+
+div.content button.go_back_btn:active {
+  background-color:orange;
+  box-shadow: 0 2px gray;
+  transform: translateY(4px);
+}
+
+/* TEAM LEADS PAGE */
+
+.active_user h6{
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+div.content h2.leads_page_title {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+div.content img.leads_page_logo{
+  position: relative;
+  margin-top: -180px;
+}
+
+button.report_button {
+  border-radius: 4px;
+  background-color: #FFCC70;
+  border: none;
+  color: #800000;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  width: 15%;
+  margin: 5px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+div.content button.report_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+div.content button.report_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+ 
+div.content button:hover span {
+  padding-right: 25px;
+}
+ 
+div.content button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+table.leads_table {
+  width: 100%;
+  height: 40px;
+  margin-right: 100px;
+  border: 1px dotted black;
+  overflow: auto;
+}
+
+div.content th {
+  text-align: center;
+  color: white;
+}
+
+table.leads_table tr {
+  background-color: brown;
+  text-align: center;
+}
+
+table.leads_table td {
+  background-color: #FFCC70;
+}
+
+table.leads_table td.evaluate_button {
+  text-align: center;
+}
+
+table.leads_table td.report_button {
+  text-align: center;
+}
+
+table.leads_table td>input {
+  background-color: #FFCC70;
+}
+
+.evaluate_btn {
+  background-color: DodgerBlue; 
+  border: none; 
+  color: white; 
+  padding: 10px 14px; 
+  font-size: 12px; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.evaluate_btn:hover {
+  background-color: RoyalBlue;
+}
+
+.report_btn {
+  background-color: orangered; 
+  border: none; 
+  color: white; 
+  padding: 10px 14px; 
+  font-size: 12px; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.report_btn:hover {
+  background-color: #FFCC70;
+}
+
+.report_modal_view input {
+  color: #800000;
+}
+
+.report_modal_view input {
+  background-color: #FFCC80;
+}
+
+.report_modal_view textarea {
+  background-color: #FFCC80;
+}
+
+#registered_hours {
+  background-color: #FFCC80;
+  font-weight: bold;
+}
+
+.evaluation_modal_view input{
+  text-align: center;
+}
+
+.modal_header {
+  text-align: center;
+  color: white;
+  background-color: brown;
+}
+
+.modal_content {
+  background-color: #FFCC70;
+}
+
+.reset_btn{
+  margin-left: 780px;
+}
+
+.modal_content form{
+  text-align: center;
+  font-weight: lighter;
+}
+
+.modal_content form>label{
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #800000;
+}
+
+.report_container {
+  text-align: center;
+}
+
+.report_container label{
+  color: #800000;
+}
+
+.modal_footer {
+  text-align: center;
+  color: white;
+  background-color: brown;
+}
+
+.save_btn{
+  margin-left: 700px;
 }
 
 .popup{
-    color: #880000;
-    font-size: 25px;
-    font-family: 'Futura', Arial, sans-serif ;
-    font-weight: bold;
+  color: #880000;
+  font-size: 25px;
+  font-family: 'Futura', Arial, sans-serif ;
+  font-weight: bold;
 }
 
 .warning{
-    color: 000;
-    font-size: 25px;
-    font-family: 'Futura', Arial, sans-serif ;
-    font-weight: bold;
+  color: 000;
+  font-size: 25px;
+  font-family: 'Futura', Arial, sans-serif ;
+  font-weight: bold;
 }
 
-div.log_out_container button{
-    text-align: right;
-    font-size: 15px;
-    right: 0;
-    background-color: #FFCC70;
-    color: #880000;
-    font-weight: bold;
-    border-radius: 8px;
-    border: none;
-    transition-duration: 0.3s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
-    position: fixed;
-    margin-right: 20px;
-  }
+/* GENERAL REPORT */
+
+div.content button.go_back_btn_gral {
+  display: block;
+  padding: 10px 25px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: #880000;
+  background-color: #FFCC70;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px gray;
+  margin-left: 20px;
+  width: 10%;
+}
+
+div.content button.go_back_btn_gral:hover {
+  background-color: orange;
+}
+
+div.content button.go_back_btn_gral:active {
+  background-color:orange;
+  box-shadow: 0 2px gray;
+  transform: translateY(4px);
+}
+
+div.reports_container label{
+  font-size: 20px;
+  color: #800000;
+}
+
+div.reports_container input{
+  font-size: 15px;
+  background-color: #FFCC80;
+}
+
+div.reports_container textarea{
+  font-size: 15px;
+  background-color: #FFCC80;
+}
+
+div.report_card {
+  height: 680px;
+  width: 70%;
+  background-color: #FFCC70;
+  text-align: center;
+  margin: 0 auto;
+}
+
+div.card_divider {
+  height: 50px;
+  width: 70%;
+  background-color: #800000;
+  margin: 0 auto;
+}
+
+div.report_card h2 {
+  text-align: center;
+  font-size: 45px;
+  color: #800000;
+}
