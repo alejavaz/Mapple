@@ -11,7 +11,7 @@
     <div class="content">
         <img src="../imgs/stop_hand.png" onmouseover="bigImg(this)" onmouseout="normalImg(this)" alt="stop_hand" class="stop_hand">
         <h2 class="access_denied_warning">ACCESS DENIED</h2>
-        <button class="go_back_btn" id="go_back_btn" type="button" onClick="javascript:clickinner(this);">Go back</button>
+        <button class="go_back_btn" id="go_back_btn" type="button" onClick="javascript:clickinner_denied(this);">Go back</button>
     </div>
 
 </body>
