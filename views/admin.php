@@ -1,6 +1,4 @@
-<?php
-    include("../db/db.php");
-?>
+<?php include("../db/db.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,23 +7,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../imgs/Mapple.png">
 
     <title>Administrator</title>
-    
-    <link rel="shortcut icon" href="../imgs/Mapple.png">
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
-    crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/jquery.tabledit.js"></script>
     <script src="../js/jquery.tabledit.min.js"></script>
-    
-    
+
+
 </head>
 
 <body>
@@ -39,8 +36,7 @@
 
     <section>
         <div class="active_user">
-        <h6>User: <?php echo $_SESSION['var']?></h6>
-        <? die(var_dump($_SESSION['var'])); ?>
+            <h6>User: <?php echo $_SESSION['var'] ?></h6>
         </div>
         <br>
         <br>
@@ -66,7 +62,7 @@
                                 <p><label for="">User: </label></p>
                                 <p><input type="email" name="getuser" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
                                 <p><label for="">Edit user name: </label>
-                                    <input type="checkbox" id="modusr"  onfocus="highlight_input(this)" onblur="white_input(this)" onclick="change_button(this,'sub3')" /></P>
+                                    <input type="checkbox" id="modusr" onfocus="highlight_input(this)" onblur="white_input(this)" onclick="change_button(this,'sub3')" /></P>
                                 <p><input type="email" name="getnewuser" id="sub3" size="30" disabled="disabled"> </p>
                                 <p><label for="">Set password: </label></p>
                                 <p> <input type="text" name="getpass" id="" size="30" onfocus="highlight_input(this)" onblur="white_input(this)"> </p>
@@ -295,98 +291,63 @@
 
     <section class="paddmenu" style="margin-left: 47%" ;>
         <div>
-            <input type="image" class="modbotton modbotton1" src="../imgs/comb.png" data-toggle="modal" data-target="#modalmodrep">
-            <h3 class="modalactionbut">Modify Report</h3>
-            <div class="modal fade" id="modalmodrep" role="dialog">
-                <div class="modalmodrep">
-                         <p class="modtxt"><label for="">GIT PROYECT REPORT: </label></p>
-                         <table class="tablecontent" id="editable_table">
-                            <tr>
-                                <th>ID</th>
-                                <th>Git Branch</th>
-                                <th>Git Proyect</th>
-                                <th>Developer</th>
-                                <th>Entry Date</th>
-                                <th>Start hour</th>
-                                <th>End hour</th>
-                                <th>Dev hours</th>
-                                <th>Dev Comments</th>
-                                <th>Reviewer</th>
-                                <th>Lead hours</th>
-                                <th>Lead comments</th>
-                            </tr>
-                            <?php
-                            $conn = new MySqli('localhost', 'root', '', 'mapple');
-                            $show = mysqli_query($conn, "SELECT g.id_g,p.name_p,p.url,d.email,g.gentry_date, g.start, g.end, g.hours, g.u_comment, 
-                            u.email,g.approved_hrs, g.l_comments FROM gituser g JOIN users u ON u.id_u = g.lead 
-                            JOIN users d ON d.id_u = g.git_user_email JOIN proyect p ON p.id = g.git_proyect ORDER BY id_g ASC");
-
-                            
-                            while ($row = mysqli_fetch_array($show)) {
-                                    echo '
-                                    <tr>
-                                    <td>'.$row['id_g'].'</td>
-                                    <td>'.$row['name_p'].'</td>
-                                    <td>'.$row['url'].'</td>
-                                    <td>'.$row['email'].'</td>
-                                    <td>'.$row['gentry_date'].'</td>
-                                    <td>'.$row['start'].'</td>
-                                    <td>'.$row['end'].'</td>
-                                    <td>'.$row['hours'].'</td>
-                                    <td>'.$row['u_comment'].'</td>
-                                    <td>'.$row['email'].'</td>
-                                    <td>'.$row['approved_hrs'].'</td>
-                                    <td>'.$row['l_comments'].'</td>
-                                    </tr>';
-                                }
-                                echo '</table';
-                            
-
-                            ?>
-
-                        </table>
-                 </div>
-            </div>
+            <a href="../functions/modifyreport.php">
+                <img class="modbotton modbotton1" src="../imgs/comb.png">
+                <h3 class="modalactionbut">Modify Report</h3>
+            </a>
         </div>
 
     </section>
 
+    <section class="paddmenu" style="margin-left: 42%" ;>
+
+        <div>
+            <input type="image" class="modbotton modbotton1" src="../imgs/comb.png" data-toggle="modal" data-target="#modaldev">
+            <h3 class="modalactionbut">Report by Developer</h3>
+            <div id="modaldev" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div>
+                        <div class="modalstyle2">
+                            <?php
+                            $showdev = mysqli_query($conn, "SELECT u.email, sum(g.hours) as 'dv', sum(g.approved_hrs) as 'tl'
+                                FROM users u  
+                                JOIN gituser g 
+                                WHERE u.id_u = g.git_user_email
+                                GROUP BY u.email
+                                ORDER BY u.email ASC");
+                            ?>
+
+                            <table class="tablecontent" id="editable_table">
+                                <thead>
+                                    <tr>
+                                        <th>Developer</th>
+                                        <th>Reported Hours</th>
+                                        <th>Approved Hours</th>
+                                    </tr>
+                                </thead>
+                                <?php
+                                if ($showdev) {
+                                    foreach ($showdev as $row) {
+                                ?>
+                                        <tbody>
+                                            <td> <?php echo $row['email']; ?></td>
+                                            <td> <?php echo $row['dv']; ?></td>
+                                            <td> <?php echo $row['tl']; ?></td>
+                                        </tbody>
+                                <?php
+                                    }
+                                } else {
+                                    echo "No records Found";
+                                }
+                                ?>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
-
-<script>
-$(document).ready(function(){
-    
-    $('#editable_table').Tabledit({
-        
-        url:'../functions/action.php',
-        columns:{
-            identifier:[0, "id_g"],
-            editable:[
-                [1, 'name_p'],
-                [2, 'url'], 
-                [3, 'email'],
-                [4, 'gentry_date'],
-                [5, 'start'],
-                [6, 'end'],
-                [7, 'hours'],
-                [8, 'u_comment'],
-                [9, 'email'],
-                [10, 'approved_hrs'],
-                [11, 'l_comments']]
-        },
-        
-        restoreButton:false,
-        onSuccess:function(data, textStatus, jqXHR)
-        {
-            
-            if(data.action == 'delete')
-            {
-                $('#'+data.id_g).remove();
-            }
-        }
-    });
-});
-
-</script>

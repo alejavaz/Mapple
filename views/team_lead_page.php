@@ -56,70 +56,6 @@
   </div>
 </div>
 
-<!-- <div class="w3-container report_modal_view">
-
-  <div id="report_modal" class="w3-modal w3-animate-opacity">
-    <div class="w3-modal-content w3-card-4">
-      <header class="w3-container modal_header"> 
-        <span onclick="document.getElementById('report_modal').style.display='none'" 
-        class="w3-button w3-large w3-display-topright">&times;</span>
-        <h2>REPORT MODAL</h2>
-      </header>
-      <div class="w3-container modal_content">
-            <br>
-            <div class="report_container">
-            <input type="text" id="report_id" name="report_id" value="">
-
-              <label for="user_worked">User: </label>
-              <input type="text" size="31%" name="user_worked" id="user_worked" value="" onselect="selected_report('You can only read this!')" readonly>
-              &nbsp;
-              <label for="responsible_lead">Lead: </label>
-              <input type="text" size="33%" name="responsible_lead" id="responsible_lead" value="" onselect="selected_report('You can only read this!')" readonly>
-              <br>
-              <br>
-              <label for="git_project">Git project: </label>
-              <input type="text" size="25%" name="git_project" id="git_project" value="" onselect="selected_report('You can only read this!')" readonly>
-              &nbsp;
-              <label for="project_url">Url: </label>
-              <input type="text" size="35%" name="project_url" id="project_url" value="" onselect="selected_report('You can only read this!')" readonly>
-              <br>
-              <br>
-              <label for="project_status">Status: </label>
-              <input type="text" size="32%" name="project_status" id="project_status" value="" onselect="selected_report('You can only read this!')" readonly>
-              <br>
-              <br>
-              <label for="start_time">Start time: </label>
-              <input type="text" size="25%" name="start_time" id="start_time" value="" onselect="selected_report('You can only read this!')" readonly>
-              &nbsp;
-              <label for="end_time">End time: </label>
-              <input type="text" size="30%" name="end_time" id="end_time" value="" onselect="selected_report('You can only read this!')" readonly>
-              <br>
-              <br>
-              <label for="project_registered_hours">Registered hours: </label>
-              <input type="text" size="4" name="project_registered_hours" id="project_registered_hours" value="" onselect="selected_report('You can only read this!')" readonly>
-              &nbsp;
-              <label for="project_approved_hours">Approved hours: </label>
-              <input type="text" size="4" name="project_approved_hours" id="project_approved_hours" value="" onselect="selected_report('You can only read this!')" readonly>
-              <br>
-              <br>
-              <label for="developers_comments">Developer's comments: </label>
-              <br>
-              <textarea rows="4" cols="80" name="developers_comments" id="developers_comments" value="" onselect="selected_report('You can only read this!')" readonly></textarea>
-              <br>
-              <br>
-              <label for="team_leads_comments">Team lead's comments: </label>
-              <br>
-              <textarea rows="4" cols="80" name="team_leads_comments" id="team_leads_comments" value="" onselect="selected_report('You can only read this!')" readonly></textarea>
-              <br>
-              <br>
-            </div>
-      </div>
-      <footer class="w3-container modal_footer">
-        &nbsp;
-      </footer>
-    </div>
-  </div>
-</div> -->
 
 <div class="content">
 
@@ -138,7 +74,7 @@
     <h2 class="leads_page_title">TEAM LEAD'S PAGE</h2> 
     <br>        
     <br>        
-    <!-- <img class="leads_page_logo" src="../imgs/Mapple.png" alt="mapple_logo" width="200px" height="200px"> -->
+   
     &nbsp;
     &nbsp;
     <div class="gral_report_container">
@@ -182,8 +118,8 @@
                           st.status,
                           usr.id_u,
                           usr.email 
-                        FROM proyect pr
-                        LEFT JOIN gituser gu ON pr.id = gu.id_g
+                        FROM gituser gu
+                        LEFT JOIN proyect pr  ON gu.git_proyect = pr.id
                         LEFT JOIN status st ON pr.status = st.id_s
                         LEFT JOIN users usr ON gu.git_user_email = usr.id_u
                           ";
@@ -200,11 +136,11 @@
                     <td><?php echo $row['hours']; ?></td>
                     <td><?php echo $row['u_comment']; ?></td>
                     <td><?php echo $row['lead']; ?></td>
-                    <td class="evaluate_button"><button class="evaluate_btn" onclick="document.getElementById('evaluation_modal').style.display='block'; fill_evaluation_data(<?=$row['id']; ?>); fill_evaluation_data2(<?=$row['hours']; ?>)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
+                    <td class="evaluate_button"><button class="evaluate_btn" onclick="document.getElementById('evaluation_modal').style.display='block'; fill_evaluation_data(<?=$row['id_g']; ?>); fill_evaluation_data2(<?=$row['hours']; ?>)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
                     </td>
                     <form action="get_report.php" method="POST" id="report_form">
                         <input type="hidden" id="id_report" name="id_report" value="" >
-                        <td id="report_button" class="report_button"><button class="report_btn" type="submit" onclick="fill_report_data(<?=$row['id']; ?>);" form="report_form" name="getting_report"><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
+                        <td id="report_button" class="report_button"><button class="report_btn" type="submit" onclick="fill_report_data(<?=$row['id_g']; ?>);" form="report_form" name="getting_report"><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
                         </td>
                     </form>
                   </tr>

@@ -54,8 +54,8 @@
                     st.status,
                     usr.id_u,
                     usr.email 
-                FROM proyect pr
-                LEFT JOIN gituser gu ON pr.id = gu.id_g
+                FROM gituser gu
+                LEFT JOIN proyect pr  ON gu.git_proyect = pr.id
                 LEFT JOIN status st ON pr.status = st.id_s
                 LEFT JOIN users usr ON gu.git_user_email = usr.id_u";
         $result_tb_projects = mysqli_query($conn, $query);    
@@ -65,7 +65,7 @@
             <!-- <div class="card_divider"></div> -->
             <div class="report_card">
                 <br>
-                <h2>REPORT #<?php echo $row['id']; ?></h2>
+                <h2>REPORT #<?php echo $row['id_g']; ?></h2>
                 <br>
                 &nbsp;
                 <label for="user_worked">User: </label>

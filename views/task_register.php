@@ -69,9 +69,6 @@
                             ?>
                         </select>
 
-                    </p>
-                    <p>Current Status:</p>
-                    <p></p>
 
 
                     <p>Url:</p>
@@ -98,9 +95,9 @@
                 </div>
 
                 <div class="b">
-                    Start Time: <p><input type="text" size='9' id="start_time" oninvalid="alert('You must fill out the form!');" name="start_time" value="" required /></p>
-                    End Time: <p><input type="text" size='9' id="end_time" oninvalid="alert('You must fill out the form!');" name="end_time" value="" required /></p>
-                    Total Hours: <p><input type="number" size='3' oninvalid="alert('You must fill out the form!');" name="total_hours" min="0.0" max="5" step="0.5" required /></p>
+                    Start Time: <p><input type="text" size='9' id="start_time"  name="start_time" value="" required onfocus="highlight_input(this)" onblur="white_input(this)"/></p>
+                    End Time: <p><input type="text" size='9' id="end_time" name="end_time" value="" required onfocus="highlight_input(this)" onblur="white_input(this)"/></p>
+                    Total Hours: <p><input type="number" size='3' name="total_hours" min="0.0" max="5" step="0.5" required onfocus="highlight_input(this)" onblur="white_input(this)"/></p>
 
                 </div>
 
@@ -118,7 +115,7 @@
 
             <section class="d">
                 <p>Comments: </p>
-                <p><textarea resize="none" rows="1" oninvalid="alert('You must fill out the form!');" name="comments" row="2" required></textarea></p>
+                <p><textarea resize="none" rows="1" name="comments" row="2" required onfocus="highlight_input(this)" onblur="white_input(this)" ></textarea></p>
             </section>
 
 

@@ -1,4 +1,4 @@
-body{
+.body{
   background-color: #800000;
   background-image: url('../imgs/Mapple.png');
   background-repeat: no-repeat;
@@ -8,10 +8,17 @@ body{
 
 }
 
+.body2{
+  background-color: #800000;
+  font-family: 'Futura', Arial, sans-serif;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+
 /*----------- ADMIN PAGE -----------*/ 
 
 /*
-
 style= "border: red 5px solid"
 echo();
 die(var_dump($result));
@@ -84,9 +91,9 @@ die(var_dump($result));
   
   font-size: 20px;
   right: 0;
-  background-color: #880000;
-  color: white;
-  font-weight: bold;
+  background-color: #880000 !important;
+  color: white !important;
+  font-weight: bold !important;
   border-radius: 8px;
   border: none;
   transition-duration: 0.3s;
@@ -130,6 +137,24 @@ die(var_dump($result));
 
 }
 
+.modalstyle2{
+  background-color: #FFCC70;
+  font-family: 'Futura', Arial, sans-serif ;
+  font-size: 25px;
+  outline-width: 5px;
+  outline-color: white;
+  border-radius: 10px;
+  border: white 5px solid;
+  margin-top: 25%;
+  padding-top: 25px;
+  padding-right: 25px !important;
+  padding-left: 25px !important;
+  padding-right: 25px;
+  
+  
+
+}
+
 .modalstylegit{
   background-color: #FFCC70;
   font-family: 'Futura', Arial, sans-serif ;
@@ -161,6 +186,7 @@ die(var_dump($result));
   overflow: auto;
   overflow-y: auto;
   border-radius: 10px;
+  padding-right: 15px;
 }
 
 .modtxt{
@@ -172,6 +198,7 @@ die(var_dump($result));
 }
 
 .tablecontent{
+  
   border-collapse: collapse;
   margin-bottom: 20px;
   margin-left: 20px; 
@@ -230,19 +257,42 @@ div.log_out_container button{
   margin-right: 20px;
 }
 
+.cardbody{
+  background-color:#FFCC70 ;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 100px;
+  padding-right: 15px;
+  border-radius: 8px;
+  border: 5px white solid;
+}
 
+.modal-header{
+  background-color:#FFCC70 ;
+  font-weight: bold;
+  text-align: center;
 
+}
+
+.modal-body{
+  background-color:#FFCC70 ;
+}
+
+.modal-footer{
+  background-color:#FFCC70 ;
+}
+
+.body2{
+    background-color: #800000 !important; 
+    background-image: url('../imgs/Mapple.png');
+    background-repeat: no-repeat;
+}
 
 
 /*----------- TASK REGISTER PAGE -----------*/
 
 
-*{
-  margin:0 px;
-  padding:0 px;
-  box-sizing: border-box;
-  position: initial;
-}
+
 
 body{
   background-color: #800000;
@@ -357,7 +407,7 @@ body{
 }
 
 fieldset>div{
-  width: 33%;
+  widht: 33%;
   text-align: center;
   position:relative;
   top: 40px;
@@ -370,7 +420,7 @@ fieldset>form>div>div{
   right: 90px;
   }
 
-fieldset>form>section>artticle{
+fieldset>form>section>article{
   position: relative;
   top: 50px;
   left: 50px;
@@ -397,10 +447,6 @@ fieldset>form>section>div{
   color: #020088;
   font: bold;
   font-weight: bolder;
-}
-
-.auto_stamp {
-  color: #800000;
 }
 
 
@@ -809,6 +855,7 @@ div.content button.go_back_btn_gral {
   box-shadow: 0 4px gray;
   margin-left: 20px;
   width: 10%;
+  position: fixed;
 }
 
 div.content button.go_back_btn_gral:hover {

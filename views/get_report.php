@@ -7,29 +7,29 @@
 		$obtained_id_report = $_POST["id_report"];
 
 		$query = $conn->query("SELECT 
-								pr.id,
-								pr.name_p,
-								pr.url,
-								pr.status,
-								gu.id_g,
-								gu.git_proyect,
-								gu.git_branch,
-								gu.start,
-								gu.end,
-								gu.hours,
-								gu.approved_hrs,
-								gu.u_comment,
-								gu.l_comments,
-								gu.lead,
-								gu.git_user_email,
-								st.id_s,
-								st.status,
-								usr.id_u,
-								usr.email 
-							FROM proyect pr
-							LEFT JOIN gituser gu ON pr.id = gu.id_g
-							LEFT JOIN status st ON pr.status = st.id_s
-							LEFT JOIN users usr ON gu.git_user_email = usr.id_u
+                                pr.id,
+                                pr.name_p,
+                                pr.url,
+                                pr.status,
+                                gu.id_g,
+                                gu.git_proyect,
+                                gu.git_branch,
+                                gu.start,
+                                gu.end,
+                                gu.hours,
+                                gu.u_comment,
+                                gu.lead,
+                                gu.git_user_email,
+                                gu.approved_hrs,
+                                gu.l_comments,
+                                st.id_s,
+                                st.status,
+                                usr.id_u,
+                                usr.email 
+                            FROM gituser gu
+                            LEFT JOIN proyect pr  ON gu.git_proyect = pr.id
+                            LEFT JOIN status st ON pr.status = st.id_s
+                            LEFT JOIN users usr ON gu.git_user_email = usr.id_u
 							WHERE gu.id_g = " . $obtained_id_report); 
 		$project_user = "";
 		while ($values = mysqli_fetch_array($query)) {
@@ -45,7 +45,12 @@
 			$registered_hours = $values['hours'];
 			$dev_comments = $values['u_comment'];
 			$lead_comments = $values['l_comments'];
-		}
+        }
+        
+        // if ($approved_hours == NULL OR $lead_comments == NULL) {
+        //     $approved_hours = 0;
+        //     $lead_comments = "";
+        // }
 
 	}
 

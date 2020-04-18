@@ -29,28 +29,38 @@
 
     include("../functions/db.php");
 
-
-
     if (isset($_POST['record_task_btn'])) {
 
         $git_u_email   = $_POST['user_email'];
         $git_proyect   = $_POST['git_proyect2'];
-        $git_branch    = $_POST['git_branch'];
         $git_status    = $_POST['adds'];
-        //die(var_dump($git_status));
+        $git_url       = ("https://github.com/mapplepii/.$git_proyect".".git");
         $git_comments  = $_POST['comments'];
         $git_S_time    = $_POST['start_time'];
         $git_E_time    = $_POST['end_time'];
         $git_T_hour    = $_POST['total_hours'];
 
 
+        $result_user = mysqli_query($conn, "SELECT id_u FROM users WHERE email = '$git_u_email'");
+        $result_proyect = mysqli_query($conn, "SELECT id FROM proyect WHERE name_p = '$git_proyect'");
+        while ($uservalue = mysqli_fetch_array($result_user)) {
+            $userval = $uservalue['id_u'];
+        };
+        while ($proyectvalue = mysqli_fetch_array($result_proyect)) {
+            $proyectval = $proyectvalue['id'];
+        };
 
         //$gentry_date = date('d/m/Y');
-        $sqlquerytask = "INSERT INTO gituser (`git_proyect`, `git_user_email`, `git_branch`, `status`, `start`, `end`, `hours`, `u_comment`, `lead`, `approved_hrs`, `l_comments`) 
-    VALUES ('$git_proyect', '$git_u_email', '$git_branch', '$git_status', '$git_S_time', '$git_E_time', '$git_T_hour', '$git_comments', NULL, NULL, NULL)";
+        $sqlquerytask = ("INSERT INTO gituser (git_proyect, git_branch, start, end, hours, 
+        u_comment, git_user_email) 
+        VALUES ('$proyectval', '$git_url', '$git_S_time', '$git_E_time', '$git_T_hour', 
+            '$git_comments', '$userval')");
+
+        $updst = mysqli_query($conn, "UPDATE proyect SET status = '$git_status' WHERE id = '$proyectval'");
+
         $result = mysqli_query($conn, $sqlquerytask);
         if (!$result) {
-        ?>
+    ?>
             <script>
                 taskboxfail('Failed to insert Record')
             </script>

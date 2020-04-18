@@ -58,14 +58,14 @@
                 mysqli_query($conn, "UPDATE proyect SET active=0 WHERE name_p = '$gitnew'");
             ?>
                 <script>
-                    boxwarning("GIT Proyect modified with status: Finished a")
+                    boxwarning("GIT Proyect modified with status: Closed")
                 </script>
             <?php
             } else {
                 mysqli_query($conn, "UPDATE proyect SET active=1 WHERE name_p = '$gitnew'");
             ?>
                 <script>
-                    boxsuccess("GIT Proyect modified successfully a")
+                    boxsuccess("GIT Proyect modified Successfully")
                 </script>
             <?php
             }
