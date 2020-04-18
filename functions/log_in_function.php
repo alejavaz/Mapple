@@ -8,14 +8,10 @@ if (isset($_POST['logear'])) {
     $user_password = $_POST['user_password'];
     $access = 0;
     $user_role = 0;
-    // echo $user_email; 
-    // echo $user_password; 
 
     $query = "SELECT * FROM users";
     $result_tb_users = mysqli_query($conn, $query); 
         
-    // die(var_dump($log_uname, $log_psw));
-
         while($row = mysqli_fetch_assoc($result_tb_users)) {
 
             if ($user_email == $row["email"] && $user_password == $row["pass"] && $row["status"]){
@@ -37,7 +33,6 @@ if (isset($_POST['logear'])) {
             else {
                 header('Location: ../views/admin.php'); //admin
                 $_SESSION['var'] = $user_email;
-                echo "f";
             }
 
         }  

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Access denied</title>
+    <link rel="shortcut icon" href="../imgs/Mapple.png">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="../js/scripts.js"></script>
 </head>
-<body>
+<body class="access_denied_body">
     <div class="content">
         <img src="../imgs/stop_hand.png" onmouseover="bigImg(this)" onmouseout="normalImg(this)" alt="stop_hand" class="stop_hand">
         <h2 class="access_denied_warning">ACCESS DENIED</h2>

@@ -357,7 +357,7 @@ body{
 }
 
 fieldset>div{
-  widht: 33%;
+  width: 33%;
   text-align: center;
   position:relative;
   top: 40px;
@@ -399,16 +399,12 @@ fieldset>form>section>div{
   font-weight: bolder;
 }
 
-
-
+.auto_stamp {
+  color: #800000;
+}
 
 
 /* LOG OUT */
-
-
-
-
-
 
 div.log_out_container button{
   text-align: right;
@@ -438,7 +434,7 @@ div.log_out_container button{
 
 div.active_user H6{
   text-align: right;
-  font-size: 15px;
+  font-size: 20px;
   right: 0;
   background-color: #FFCC70;
   color: #880000;
@@ -449,6 +445,10 @@ div.active_user H6{
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6), 0 6px 20px 0 rgba(0,0,0,0.19);
   position: fixed;
   margin-right: 20px;
+  height: auto;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 
@@ -575,16 +575,12 @@ div.content button.go_back_btn:active {
 /* TEAM LEADS PAGE */
 
 
-
-
-
-
-.active_user h6{
+/* .active_user h6{
   text-align: right;
   font-size: 18px;
   font-weight: bold;
   color: white;
-}
+} */
 
 div.content h2.leads_page_title {
   text-align: center;
@@ -796,3 +792,67 @@ div.log_out_container button{
     margin-right: 20px;
 }
 
+/* GENERAL REPORT */
+
+div.content button.go_back_btn_gral {
+  display: block;
+  padding: 10px 25px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: #880000;
+  background-color: #FFCC70;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px gray;
+  margin-left: 20px;
+  width: 10%;
+}
+
+div.content button.go_back_btn_gral:hover {
+  background-color: orange;
+}
+
+div.content button.go_back_btn_gral:active {
+  background-color:orange;
+  box-shadow: 0 2px gray;
+  transform: translateY(4px);
+}
+
+div.reports_container label{
+  font-size: 20px;
+  color: #800000;
+}
+
+div.reports_container input{
+  font-size: 15px;
+  background-color: #FFCC80;
+}
+
+div.reports_container textarea{
+  font-size: 15px;
+  background-color: #FFCC80;
+}
+
+div.report_card {
+  height: 730px;
+  width: 70%;
+  background-color: #FFCC70;
+  text-align: center;
+  margin: 0 auto;
+}
+
+div.card_divider {
+  height: 50px;
+  width: 70%;
+  background-color: #800000;
+  margin: 0 auto;
+}
+
+div.report_card h2 {
+  text-align: center;
+  font-size: 45px;
+  color: #800000;
+}

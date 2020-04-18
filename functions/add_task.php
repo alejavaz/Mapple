@@ -34,10 +34,10 @@
     if (isset($_POST['record_task_btn'])) {
 
         $git_u_email   = $_POST['user_email'];
-        $git_proyect   = $_POST['git_proyect'];
+        $git_proyect   = $_POST['git_proyect2'];
         $git_branch    = $_POST['git_branch'];
         $git_status    = $_POST['adds'];
-        die(var_dump($git_status));
+        //die(var_dump($git_status));
         $git_comments  = $_POST['comments'];
         $git_S_time    = $_POST['start_time'];
         $git_E_time    = $_POST['end_time'];

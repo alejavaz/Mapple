@@ -1,5 +1,5 @@
 <?php 
-      include("../db/db.php"); 
+      include("../db/db.php");
 ?>
 
 <!DOCTYPE html>
@@ -8,13 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team lead page</title>
+    <link rel="shortcut icon" href="../imgs/Mapple.png">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="../js/scripts.js"></script>
 </head>
-<body> 
+<body class="team_leads_body"> 
 
 <div class="w3-container evaluation_modal_view">
   <div id="evaluation_modal" class="w3-modal w3-animate-opacity">
@@ -28,6 +29,7 @@
         <form action="../functions/register_evaluation.php" method="POST" id="evaluation_form">
             <br>
             <input type="hidden" id="id_evaluation" name="id_evaluation" value="">
+            <input type="hidden" id="evaluator" name="evaluator" value="<?php echo $_SESSION['var']?>">
             <br>
             <label for="registered_hours">Registered hours</label>
             <br>
@@ -54,7 +56,7 @@
   </div>
 </div>
 
-<div class="w3-container report_modal_view">
+<!-- <div class="w3-container report_modal_view">
 
   <div id="report_modal" class="w3-modal w3-animate-opacity">
     <div class="w3-modal-content w3-card-4">
@@ -66,9 +68,8 @@
       <div class="w3-container modal_content">
             <br>
             <div class="report_container">
-            <input type="hidden" id="report_id" name="report_id" value="">
-            
-                     
+            <input type="text" id="report_id" name="report_id" value="">
+
               <label for="user_worked">User: </label>
               <input type="text" size="31%" name="user_worked" id="user_worked" value="" onselect="selected_report('You can only read this!')" readonly>
               &nbsp;
@@ -83,9 +84,6 @@
               <input type="text" size="35%" name="project_url" id="project_url" value="" onselect="selected_report('You can only read this!')" readonly>
               <br>
               <br>
-              <label for="project_branch">Branch: </label>
-              <input type="text" size="28%" name="project_branch" id="project_branch" value="" onselect="selected_report('You can only read this!')" readonly>
-              &nbsp;
               <label for="project_status">Status: </label>
               <input type="text" size="32%" name="project_status" id="project_status" value="" onselect="selected_report('You can only read this!')" readonly>
               <br>
@@ -121,7 +119,7 @@
       </footer>
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="content">
 
@@ -154,8 +152,8 @@
               
                 <tr>
                     <th>USER</th>
-                    <th>GIT BRANCH</th>
                     <th>GIT PROJECT</th>
+                    <th>GIT URL</th>
                     <th>STATUS</th>
                     <th>START TIME</th>
                     <th>END TIME</th>
@@ -179,7 +177,7 @@
                           gu.hours,
                           gu.u_comment,
                           gu.lead,
-                          gu.dev,
+                          gu.git_user_email,
                           st.id_s,
                           st.status,
                           usr.id_u,
@@ -187,15 +185,15 @@
                         FROM proyect pr
                         LEFT JOIN gituser gu ON pr.id = gu.id_g
                         LEFT JOIN status st ON pr.status = st.id_s
-                        LEFT JOIN users usr ON gu.dev = usr.id_u
+                        LEFT JOIN users usr ON gu.git_user_email = usr.id_u
                           ";
                 $result_tb_projects = mysqli_query($conn, $query);    
 
                 while($row = mysqli_fetch_assoc($result_tb_projects)) { ?>
-                <tr>
+                  <tr>
                     <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['git_proyect']; ?></td>
                     <td><?php echo $row['git_branch']; ?></td>
-                    <td><?php echo $row['url']; ?></td>
                     <td><?php echo $row['status']; ?></td>
                     <td><?php echo $row['start']; ?></td>
                     <td><?php echo $row['end']; ?></td>
@@ -204,9 +202,12 @@
                     <td><?php echo $row['lead']; ?></td>
                     <td class="evaluate_button"><button class="evaluate_btn" onclick="document.getElementById('evaluation_modal').style.display='block'; fill_evaluation_data(<?=$row['id']; ?>); fill_evaluation_data2(<?=$row['hours']; ?>)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> 
                     </td>
-                    <td class="report_button"><button class="report_btn" onclick="document.getElementById('report_modal').style.display='block'; fill_report_data(<?=$row['id']; ?>)"><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
-                    </td>
-                </tr>
+                    <form action="get_report.php" method="POST" id="report_form">
+                        <input type="hidden" id="id_report" name="id_report" value="" >
+                        <td id="report_button" class="report_button"><button class="report_btn" type="submit" onclick="fill_report_data(<?=$row['id']; ?>);" form="report_form" name="getting_report"><i class="fa fa-file-text-o" aria-hidden="true"></i></button>
+                        </td>
+                    </form>
+                  </tr>
                 <?php } ?>
             </tbody>
         </table>

@@ -1,4 +1,6 @@
-<?php include("../functions/db.php"); ?>
+<?php
+    include("../db/db.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,20 +17,25 @@
     <script src="../js/scripts.js"></script>
 
 </head>
-<style>
-    body {
-        background-color: #800000;
-        background-image: url('../imgs/Mapple.png');
-        background-repeat: no-repeat;
-    }
-</style>
 
-<body>
+<body class="task_register_body">
+
+<style>
+        body {
+            background-color: #800000;
+            background-image: url('../imgs/Mapple.png');
+            background-repeat: no-repeat;
+        }
+    </style>
 
     <header>
 
         <h1>Developer´s Module </h1>
-        <?php include("../functions/db.php"); ?>
+        <div class="active_user">
+        <h6>User: <?php echo $_SESSION['var']?></h6>
+        </div>
+        <br>
+        <br>
         <div class="log_out_container">
             <form action="../general_login.php">
                 <button type="input">Log out</button>
@@ -43,7 +50,7 @@
 
             <section class="header">
                 <label for="user_email">User email: </label>
-                <input type="text" size="30%" name="user_email" id="user_email" value="" onselect="selected_report('You can only read this!')">
+                <input type="text" size="auto" name="user_email" id="user_email" value="<?php echo $_SESSION['var']?>" onselect="selected_report('You can only read this!')" readonly>
             </section>
 
             <section class="submenu">
@@ -68,7 +75,7 @@
 
 
                     <p>Url:</p>
-                    <span id="spURL"></span>
+                    <span class="auto_stamp" id="spURL"></span>
 
                     <br></br>
 

@@ -1,3 +1,7 @@
+<?php
+    include("../db/db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +12,7 @@
 
     <title>Administrator</title>
     
+    <link rel="shortcut icon" href="../imgs/Mapple.png">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
@@ -33,6 +38,12 @@
     </style>
 
     <section>
+        <div class="active_user">
+        <h6>User: <?php echo $_SESSION['var']?></h6>
+        <? die(var_dump($_SESSION['var'])); ?>
+        </div>
+        <br>
+        <br>
         <div class="log_out_container">
             <br>
             <form action="../general_login.php">

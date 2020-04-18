@@ -125,16 +125,24 @@ function clickinner(logout) {
     location.href='general_login.php';
 };
 
-
 $(document).ready(function() {
     $("#git_proyect2").change(function() {
         $("#git_proyect2 option:selected").each(function() {
             idProyect = $(this).attr('id'); //almacena variable
             $.post("../functions/obtenerURL.php", { idProyect: idProyect }, function(data){
                 $("#spURL").html(data);
-               });
-       });
+            });
+        });
     })
+
+//     $("#report_id").each(function() {
+//         alert("Hola");
+//         idProyect = $(this).attr('id'); //almacena variable
+//         $.post("../functions/get_report.php", { idProyect: idProyect }, function(data){
+//             $("#user_worked").html(data);
+//            });
+//    });
+
 });
 
 // -------------------- ADMIN PAGE ------------------- //
@@ -242,7 +250,8 @@ function fill_evaluation_data2(hours) {
 }
 
 function fill_report_data(id) {
-    document.getElementById("report_id").value = id;
+    document.getElementById("id_report").value = id;
+       
 }
 
 function highlight_input(x) {
