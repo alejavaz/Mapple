@@ -1,0 +1,136 @@
+/* class */
+
+div.content img.log_in_logo{
+  display: block;
+  margin-left: 550px;
+  margin-right: 450px;
+  width: 40%;
+}
+
+div.content img.leads_page_logo{
+    position: relative;
+    margin-top: -90px;
+ }
+
+ div.content form {
+  font-weight: bold;
+  color: #000000;
+  text-align: center;                                    
+}
+
+ div.content label {
+    text-align: center;                                    
+ }
+
+ div.content input {
+    text-align: left;                                    
+ }
+
+ div.content label {
+   text-align: center;
+ }
+ 
+ div.content button.log_in_button {
+   border-radius: 4px;
+   background-color: #f4511e;
+   border: none;
+   color: #FFFFFF;
+   text-align: center;
+   font-size: 15px;
+   padding: 15px;
+   width: 350px;
+   transition: all 0.5s;
+   cursor: pointer;
+   margin: 5px;
+   margin-left: 700px;
+ }
+ 
+ div.content button.log_in_button span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+ }
+ 
+ div.content button.log_in_button span:after {
+   content: '\00bb';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -20px;
+   transition: 0.5s;
+ }
+
+ div.content h2 {
+   text-align: center;
+   font-size: 40px;
+   color: white;
+ }
+
+ div.content button.report_button {
+  border-radius: 4px;
+   background-color: #f4511e;
+   border: none;
+   color: #FFFFFF;
+   text-align: center;
+   font-size: 15px;
+   padding: 15px;
+   width: 350px;
+   transition: all 0.5s;
+   cursor: pointer;
+   margin: 5px;
+   margin-left: 1100px;
+   margin-top: -5px;
+}
+
+div.content button.report_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+div.content button.report_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+ 
+ div.content button:hover span {
+   padding-right: 25px;
+ }
+ 
+ div.content button:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
+
+ table.leads_table {
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 35px;
+ }
+
+ table.leads_table tr {
+  background-color: brown;
+ }
+
+ table.leads_table td {
+  background-color: orange;
+ }
+
+ table.leads_table td>input {
+  background-color: orange;
+ }
+
+/* tags */
+
+ body {
+    background-color: #800000;
+    font-family: 'Futura', Arial, sans-serif;
+    margin-left: 25px;
+    margin-top: 25px;
+ }
