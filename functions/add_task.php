@@ -34,7 +34,7 @@
         $git_u_email   = $_POST['user_email'];
         $git_proyect   = $_POST['git_proyect2'];
         $git_status    = $_POST['adds'];
-        $git_url       = ("https://github.com/mapplepii/.$git_proyect".".git");
+        $git_url       = ("https://github.com/mapplepii/"."$git_proyect".".git");
         $git_comments  = $_POST['comments'];
         $git_S_time    = $_POST['start_time'];
         $git_E_time    = $_POST['end_time'];

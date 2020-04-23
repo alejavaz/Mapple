@@ -100,8 +100,8 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Git Branch</th>
-                    <th>Git Proyect</th>
+                    <th>Proyect</th>
+                    <th>Url</th>
                     <th>Developer</th>
                     <th>Entry Date</th>
                     <th>Start hour</th>

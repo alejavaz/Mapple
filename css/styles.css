@@ -406,49 +406,6 @@ body{
   
 }
 
-fieldset>div{
-  widht: 33%;
-  text-align: center;
-  position:relative;
-  top: 40px;
-  }
-
-fieldset>form>div>div{
-  float: right;
-  position:relative;
-  bottom: 70px;
-  right: 90px;
-  }
-
-fieldset>form>section>article{
-  position: relative;
-  top: 50px;
-  left: 50px;
-  }
-
-fieldset>form>section>div{
-  position: relative;
-  left: 630px;
-  bottom: 100px;
-  }
-
-.c>.btns{
-  position: relative;
-  left: 100px;
-  top: 40px;
-  border-radius: 30%; 
-}
-
-.c>.record_task_btn{
-  position: relative;
-  right: 260px;
-  top: 10px;
-  border-radius: 30%;
-  color: #020088;
-  font: bold;
-  font-weight: bolder;
-}
-
 
 /* LOG OUT */
 
